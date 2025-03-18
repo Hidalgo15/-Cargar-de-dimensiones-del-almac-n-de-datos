@@ -2,18 +2,28 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>CargarDimensiones</Name>
-    <LastWriteTime>2025-03-14T06:06:42.3003724Z</LastWriteTime>
+    <LastWriteTime>2025-03-18T03:46:09.7324009Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadDimCustomer.dtsx</Name>
-      <LastWriteTime>2025-03-14T06:06:42.2730792Z</LastWriteTime>
+      <LastWriteTime>2025-03-18T03:31:09.8394066Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadDimShippers.dtsx</Name>
-      <LastWriteTime>2025-03-14T06:06:41.8865345Z</LastWriteTime>
+      <LastWriteTime>2025-03-18T02:58:27.7286875Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadCategory.dtsx</Name>
+      <LastWriteTime>2025-03-18T03:49:17.4639061Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadDimProducts.dtsx</Name>
+      <LastWriteTime>2025-03-18T03:49:16.2924148Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

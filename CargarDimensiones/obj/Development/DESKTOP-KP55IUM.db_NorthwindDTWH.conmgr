@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-KP55IUM.db_NorthwindDTWH"
+  DTS:DTSID="{CF180191-726C-4313-A67E-1F3AB1A0046C}"
+  DTS:CreationName="ADO">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-KP55IUM;Initial Catalog=db_NorthwindDTWH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-CargarDimensiones-{CF180191-726C-4313-A67E-1F3AB1A0046C}DESKTOP-KP55IUM.db_NorthwindDTWH;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

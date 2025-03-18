@@ -11,8 +11,8 @@
   DTS:LocaleID="7178"
   DTS:ObjectName="LoadDimCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{42E3B6FD-8257-43E9-93FC-0B59EBCB66E8}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{5DEE11AC-3EC6-44DE-B514-B0FFDC8DE98C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -23,7 +23,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">Data Source = DESKTOP-KP55IUM; initial catalog = Northwind; integrated security = true; TrustServerCertificate = true</DTS:VariableValue>
+        DTS:DataType="8">Data Source = DESKTOP-KP55IUM; initial catalog = db_NorthwindDTWH; integrated security = true; TrustServerCertificate = true</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -42,222 +42,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Load Customer\Get Customer Data"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Get Customer Data"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[VentasPorRegionPais]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load Customer\Get Customer Data.Connections[OleDbConnection]"
-                  connectionManagerID="{640D8AFE-D287-4013-A0E0-7BD64160E9B7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-KP55IUM.Northwind 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Pais]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Pais]"
-                      name="Pais"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Region]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Region]"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Region]"
-                      name="Region"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Ciudad]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Ciudad]"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Ciudad]"
-                      name="Ciudad"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[TotalVentas]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[TotalVentas]"
-                      name="TotalVentas"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CustomerID]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
-                      length="5"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CustomerID]"
-                      name="CustomerID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[ContactName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
-                      length="30"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[ContactName]"
-                      name="ContactName"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
-                      dataType="wstr"
-                      length="15"
-                      name="Pais" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="15"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Ciudad]"
-                      dataType="wstr"
-                      length="15"
-                      name="Ciudad" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
-                      dataType="r8"
-                      name="TotalVentas" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
-                      dataType="wstr"
-                      length="5"
-                      name="CustomerID" />
-                    <externalMetadataColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
-                      dataType="wstr"
-                      length="30"
-                      name="ContactName" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
-                      dataType="wstr"
-                      length="5"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
-                      name="CustomerID" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ContactName]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ContactName]"
-                      name="ContactName" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Pais]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Pais]"
-                      name="Pais" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Region]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Region]"
-                      name="Region" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Ciudad]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Ciudad]"
-                      name="Ciudad" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
-                      dataType="r8"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
-                      name="TotalVentas" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load Customer\Load Customer Data"
+              refId="Package\Load Customer\Componente de script"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;13"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Load Customer Data"
+              name="Componente de script"
               version="13">
               <properties>
                 <property
@@ -325,6 +114,14 @@ public class Connections
     public Connections(ScriptComponent Component)
     {
         ParentComponent = Component;
+    }
+
+    public IDTSConnectionManager100 Conexión
+    {
+        get
+        {
+            return ParentComponent.ComponentMetaData.RuntimeConnectionCollection.GetRuntimeConnectionByName(@"Conexión").ConnectionManager;
+        }
     }
 
 }
@@ -593,28 +390,31 @@ public class ScriptMain : UserComponent
     /// <param name="Row">The row that is currently passing through the component</param>
     public override void Entrada0_ProcessInputRow(Entrada0Buffer Row)
     {
-        LoadCustomer(Row.CustomerID,Row.ContactName, Row.Ciudad, Row.Pais,Row.Region).GetAwaiter();
+       LoadCustomer(Row.CustomerID, Row.CompanyName, Row.ContactName, Row.Country, Row.Region, Row.City).GetAwaiter();
     }
 
-    public async Task LoadCustomer(string CustomerId, string CustomerContactName, string CustomerCity, string CustomerRegion, string CustomerCountry)
+
+    public async Task LoadCustomer(string CustomerID, string CompanyName, string ContactName, string Country, string Region, string City)
     {
-        string connectionString = "Data Source=REDACTED;Initial Catalog=REDACTED;User ID=REDACTED;Password=REDACTED";
-      
+        
         try
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Variables.ConnectionString))
             {
                 await connection.OpenAsync();
-                using (SqlCommand command = new SqlCommand("INSERT INTO dbo.Customers (CustomerId,CustomerContactName, CustomerCity,CustomerRegion, CustomerCountry) " +
-                    "VALUES (@CustomerId, @CustomerContactName, @CustomerCity, @CustomerRegion, @CustomerCountry)", connection))
+                using (SqlCommand command = new SqlCommand("dbo.LoadDimCustomers", connection))
                 {
-                    command.Parameters.AddWithValue("@CustomerId", CustomerId);
-                    command.Parameters.AddWithValue("@CustomerName", CustomerContactName);
-                    command.Parameters.AddWithValue("@CustomerRegion", CustomerRegion);
-                    command.Parameters.AddWithValue("@CustomerCity", CustomerCity);
-                    command.Parameters.AddWithValue("@CustomerCountry", CustomerCountry);
-                    
-                    command.CommandType = CommandType.Text;
+                    SqlParameter sqlParameter = new SqlParameter("@CustomerID", CustomerID);
+
+
+                    command.Parameters.AddWithValue("@CustomerID", CustomerID);
+                    command.Parameters.AddWithValue("@CompanyName", CompanyName);
+                    command.Parameters.AddWithValue("@ContactName", ContactName);
+                    command.Parameters.AddWithValue("@Country", Country);
+                    command.Parameters.AddWithValue("@Region", Region);
+                    command.Parameters.AddWithValue("@City", City);
+
+                    command.CommandType = CommandType.StoredProcedure;
 
                     await command.ExecuteNonQueryAsync();
                 }
@@ -622,12 +422,11 @@ public class ScriptMain : UserComponent
         }
         catch (Exception ex)
         {
-            throw ex;
+            Console.WriteLine($"Error {ex.Message}");
         }
 
 
     }
-
 }
 ]]></arrayElement>
                     <arrayElement
@@ -655,14 +454,14 @@ public class Entrada0Buffer: ScriptBuffer
     {
     }
 
-    public String Pais
+    public String Region
     {
         get
         {
             return Buffer.GetString(BufferColumnIndexes[0]);
         }
     }
-    public bool Pais_IsNull
+    public bool Region_IsNull
     {
         get
         {
@@ -670,14 +469,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public String Region
+    public String CustomerID
     {
         get
         {
             return Buffer.GetString(BufferColumnIndexes[1]);
         }
     }
-    public bool Region_IsNull
+    public bool CustomerID_IsNull
     {
         get
         {
@@ -685,14 +484,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public String Ciudad
+    public String ContactName
     {
         get
         {
             return Buffer.GetString(BufferColumnIndexes[2]);
         }
     }
-    public bool Ciudad_IsNull
+    public bool ContactName_IsNull
     {
         get
         {
@@ -700,14 +499,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public Double TotalVentas
+    public String City
     {
         get
         {
-            return Buffer.GetDouble(BufferColumnIndexes[3]);
+            return Buffer.GetString(BufferColumnIndexes[3]);
         }
     }
-    public bool TotalVentas_IsNull
+    public bool City_IsNull
     {
         get
         {
@@ -715,14 +514,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public String CustomerID
+    public String Country
     {
         get
         {
             return Buffer.GetString(BufferColumnIndexes[4]);
         }
     }
-    public bool CustomerID_IsNull
+    public bool Country_IsNull
     {
         get
         {
@@ -730,14 +529,14 @@ public class Entrada0Buffer: ScriptBuffer
         }
     }
 
-    public String ContactName
+    public String CompanyName
     {
         get
         {
             return Buffer.GetString(BufferColumnIndexes[5]);
         }
     }
-    public bool ContactName_IsNull
+    public bool CompanyName_IsNull
     {
         get
         {
@@ -771,10 +570,10 @@ public class Entrada0Buffer: ScriptBuffer
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_6815907b61e544ca80d768fa28e8b204.Properties.Settings.get_Default():SC_6815907b61e544ca80d768fa28e8b204.Properties.Sett" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Settings.get_Default():SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Sett" +
     "ings")]
 
-namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
+namespace SC_222bc3249e4f44d694f68d20ff518a7c.Properties {
     
     
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
@@ -791,7 +590,7 @@ namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
 }
 ]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_6815907b61e544ca80d768fa28e8b204.csproj]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_222bc3249e4f44d694f68d20ff518a7c.csproj]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
@@ -803,11 +602,11 @@ namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7E67771D-F799-4898-9EDF-715C58F8CBC5}</ProjectGuid>
+    <ProjectGuid>{2C74DA6D-6013-4761-9E63-69521C091DDB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_6815907b61e544ca80d768fa28e8b204</RootNamespace>
-    <AssemblyName>SC_6815907b61e544ca80d768fa28e8b204</AssemblyName>
+    <RootNamespace>SC_222bc3249e4f44d694f68d20ff518a7c</RootNamespace>
+    <AssemblyName>SC_222bc3249e4f44d694f68d20ff518a7c</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
@@ -890,21 +689,33 @@ namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:CodeName>SC_6815907b61e544ca80d768fa28e8b204</msb:CodeName>
+    <msb:CodeName>SC_222bc3249e4f44d694f68d20ff518a7c</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>SC_6815907b61e544ca80d768fa28e8b204</msb:DisplayName>
-    <msb:ProjectId>{B1512821-9A80-43CC-9AA6-85F95CCE44E0}</msb:ProjectId>
+    <msb:DisplayName>SC_222bc3249e4f44d694f68d20ff518a7c</msb:DisplayName>
+    <msb:ProjectId>{17419DED-3CAD-423E-82C3-B9866C766B79}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
-    <msb:Project Include="SC_6815907b61e544ca80d768fa28e8b204.csproj" />
-    <msb:File Include="Properties\Settings.settings" />
-    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:Project Include="SC_222bc3249e4f44d694f68d20ff518a7c.csproj" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="main.cs" />
     <msb:File Include="BufferWrapper.cs" />
     <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:Breakpoint Include="46048219b3bf4921a034707c1e2ecdd7">
+      <msb:FileName>main.cs</msb:FileName>
+      <msb:LineNumber>119</msb:LineNumber>
+      <msb:ColumnNumber>8</msb:ColumnNumber>
+      <msb:Enabled>True</msb:Enabled>
+      <msb:ConditionType>1</msb:ConditionType>
+      <msb:Condition>
+      </msb:Condition>
+      <msb:Language>C#</msb:Language>
+      <msb:HitCountType>1</msb:HitCountType>
+      <msb:HitCountTarget>1</msb:HitCountTarget>
+    </msb:Breakpoint>
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -920,11 +731,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("SC_6815907b61e544ca80d768fa28e8b204")]
+[assembly: AssemblyTitle("SC_222bc3249e4f44d694f68d20ff518a7c")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_6815907b61e544ca80d768fa28e8b204")]
+[assembly: AssemblyProduct("SC_222bc3249e4f44d694f68d20ff518a7c")]
 [assembly: AssemblyCopyright("Copyright @  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -967,14 +778,14 @@ using System.Runtime.CompilerServices;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_6815907b61e544ca80d768fa28e8b204.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
     "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_6815907b61e544ca80d768fa28e8b204.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
     "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_6815907b61e544ca80d768fa28e8b204.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
     "):Void")]
 
-namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
+namespace SC_222bc3249e4f44d694f68d20ff518a7c.Properties {
     
     
     /// <summary>
@@ -1002,7 +813,7 @@ namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_6815907b61e544ca80d768fa28e8b204.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_222bc3249e4f44d694f68d20ff518a7c.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -1036,180 +847,162 @@ namespace SC_6815907b61e544ca80d768fa28e8b204.Properties {
                   <arrayElements
                     arrayElementCount="2">
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_6815907b61e544ca80d768fa28e8b204.dll]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_222bc3249e4f44d694f68d20ff518a7c.dll]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-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
-EgAAANMBAADlAQAAAQAAABYAAAEAAAAABwAAAOEBAADoAQAAGQAAABYAAAE2AnwJAAAEAyg+AAAK
-KgAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAgAgAACN+AADsCAAAVAoAACNT
-dHJpbmdzAAAAAEATAABsAwAAI1VTAKwWAAAQAAAAI0dVSUQAAAC8FgAAsAIAACNCbG9iAAAAAAAA
-AAIAAAFXF6ILCQsAAAD6ATMAFgAAAQAAADQAAAAJAAAAEgAAACQAAAATAAAAAQAAAD4AAAATAAAA
-AgAAAAQAAAAQAAAAEQAAAAIAAAACAAAAAQAAAAYAAAABAAAAAQAAAAMAAAAAAP4EAQAAAAAABgDK
-A7EHBgBeBLEHBgDjAp4HDwAlCAAABgAQAwkGBgCtAwkGBgCOAwkGBgBFBAkGBgDqAwkGBgADBAkG
-BgBCAwkGBgBdA6YECgAeBAECBgA3AqcFBgAnA7EHBgDjBLAIBgCrArEHBgAyAqcFBgDRAbEHBgBq
-B7EHBgBIALEHBgBQBqcFBgDFBrEHDgA/BhwJDgBOARwJBgB2A54HCgAHBwECEgD4BgECCgCKBgEC
-CgBQCQECBgDpCKcFBgDGAp4HBgAYB9EHBgB+BvQFFgCLAugEFgD3AugEFgBkAt8FBgDYBKcFBgBt
-BqcFGgARADUHGgABADUHewDXCQAAGgAiADUHBgB/AacFBgAsCgkGDgAyBloGDgAbBhwJDgBdBxwJ
-DgBEAVoGDgAmAtMABgBBALAIBgBpAacFAAAAALMAAAAAAAEAAQABABAAugUAABAAAQABAAEAEADp
-BgAAbQABAAYAAQAQADIJAAB5AAEAFQABABAAzggAAH0AAwAZAAEAEABvCAAAfQAEABoAAAAQANgH
-NAh9AAUAHAAAARAAngg0CJUABwAgAAMBEAB8AAAASQAIACMABgDOCC4BBgBvCDIBAQBACTYBAQBA
-CTYBEQCuBToBEQBUAj8BEQBZAUQBBgCgAkgBBgDcBksBBgAHAU8BBgCzAU8BBgDQBU8BBgBFCk8B
-BgA1Ck8BAQBWAFIBAQA6AFYBAQBuAFoBAQBnAF4BUCAAAAAAxgB8BAYAAQBYIAAAAADGAIcEBgAB
-AGAgAAAAAMYABwplAQEAjCAAAAAAhgAoB2sBAgDxIAAAAACGGIEHBgAHAPkgAAAAAIYYgQdJAAcA
-BCEAAAAAhginCHUBCgAZIQAAAACGCI4FagAKACIhAAAAAIYIxQV1AQoANyEAAAAAhghlBWoACgBA
-IQAAAACGCBIBdQEKAFUhAAAAAIYIPAVqAAoAXiEAAAAAhgiOB3kBCgBzIQAAAACGCHcFagAKAHwh
-AAAAAIYIvAB1AQoAkSEAAAAAhggmBWoACgCaIQAAAACGCKMBdQEKAK8hAAAAAIYITgVqAAoAuCEA
-AAAAhgAgCmoACgDAIQAAAACGAPAIagAKAMghAAAAAIYYgQcGAAoA6CEAAAAAxgCtCX0BCgANIgAA
-AADGAaQJZQEOACAiAAAAAMYBBwplAQ8AIiIAAAAAhhiBB4cBEAAxIgAAAACGGIEHhwERAEAiAAAA
-AIYIwAR1ARIAZiIAAAAAgxiBBwYAEgBuIgAAAACTCBQHjQESAJoiAAAAAJMIPAKTARIAoSIAAAAA
-kwhIApkBEgCpIgAAAACWCPwIoAETALAiAAAAAIYYgQcGABMAuCIAAAAAkRiHB6UBEwDEIgAAAADh
-AboJBgATAEwlAAAAAOEB5AEbABMAAAABACQKAAABAAcBAAACALMBAAADAEUKAAAEANAFAAAFADUK
-AAABAA0HAAACAHkIAAADAJgGAAABAMsAAAACAMcBAAADAA0HAAAEAJgGAAABAA0HAAABACQKAAAB
-AFYJAAABAFYJAAABAKAEAAABAPQBCQBNAAkAgQcBABEAgQcGABkAgQcKACkAgQcQADEAgQcQADkA
-gQcQAEEAgQcQAEkAgQcQAFEAgQcQAFkAgQcQAGEAgQcQAGkAgQcGAHkAgQcVAIkAgQcGAJkAugkG
-AJkA5AEbANEAgQcGAAEBgQcGACEBgQchAPEAfAQGAPEAhwQGAIEAdgcoALkAhAIyALkAfQk3ALkA
-3wREANkAgQdJANkADQdTANkAeQhXAOEA1QRbANkAlwVgAOEAdQFlANkAIApqANkA8AhqAPEAgQcG
-ADEBxwhuAPEAjQh2APkAgQcGAPEAYwh8AEEBngWCAPEA8gmJAEkBwwmPAHEAkQGWAHEAKAqeAAkB
-gQekACkBgQcGAMEAgQcQAHEB6ABEAKEANAFqALkAHQG6AKEACAkGAMkAgQfMAMkA2gjTAHkBkwTZ
-AIkBIgLhAIkB8gDoAAwAdgf4ABQANAFqABQACAkRAaEBfAIGALkATQYWAbkAEgkGALkA5AEbAC4A
-CwDGAS4AEwDPAS4AGwDuAS4AIwD3AS4AKwAgAi4AMwAgAi4AOwAgAi4AQwD3AS4ASwAmAi4AUwAg
-Ai4AWwA9AkMAYwCqAoAAawCHAuEAcwCqAuMAkwCqAiMBcwCqAskBmwDuAekBmwDuAYAEiwCqAi0A
-rAADAAEABgANAAcADgAIABAAAACrCKkBAACSBa0BAADYBakBAABpBa0BAAAWAakBAABABa0BAACS
-B7EBAAB7Ba0BAADAAKkBAAAqBa0BAAC7AakBAABSBa0BAADEBKkBAAAYB7UBAABcArsBAAAACcEB
-AgAHAAMAAgAIAAUAAgAJAAcAAgAKAAkAAgALAAsAAgAMAA0AAgANAA8AAgAOABEAAgAPABMAAgAQ
-ABUAAgARABcAAgASABkAAgAbABsAAgAdAB0AAgAeAB8AAQAfAB8AAgAgACEACQBGAB8ACQBIACEA
-8QABAQSAAAABAAAAAAAAAAAAAAAAAI8AAAAEAAAAAAAAAAAAAAAcAd8AAAAAABAAAAAAAAAAAAAA
-ACUBYAkAAAAABAAAAAAAAAAAAAAAHAHTAAAAAAAQAAAAAAAAAAAAAAAlAYMJAAAAAAQAAAAAAAAA
-AAAAABwBpwUAAAAAEAAAAAAAAAAAAAAAJQGiBgAAAAAAAAAAAQAAAOIHAAAJAAIAMQA/AGMAxQBj
-AAcBAAAAAABJRFRTVmFyaWFibGUxMDAASURUU1ZhcmlhYmxlczEwMABJRFRTRXZhbHVhdG9yQ29u
-dGV4dDEwMAA8PnVfXzEAVGFza2AxAFRhc2tBd2FpdGVyYDEAPGNvbm5lY3Rpb24+NV9fMgA8PnVf
-XzIAPGNvbW1hbmQ+NV9fMwA8TG9hZEN1c3RvbWVyPmRfXzMAU0NfNjgxNTkwN2I2MWU1NDRjYTgw
-ZDc2OGZhMjhlOGIyMDQAPE1vZHVsZT4AZ2V0X0N1c3RvbWVySUQASW5wdXRJRABTeXN0ZW0uRGF0
-YQBtc2NvcmxpYgBPcGVuQXN5bmMARXhlY3V0ZU5vblF1ZXJ5QXN5bmMAQ3VzdG9tZXJJZABnZXRf
-Q2l1ZGFkAEF3YWl0VW5zYWZlT25Db21wbGV0ZWQAZ2V0X0lzQ29tcGxldGVkAERiQ29tbWFuZABT
-cWxDb21tYW5kAGRlZmF1bHRJbnN0YW5jZQBJRGlzcG9zYWJsZQBHZXREb3VibGUAUnVudGltZVR5
-cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAZ2V0X0NvbnRhY3ROYW1lAEN1c3RvbWVyQ29udGFj
-dE5hbWUASW5wdXROYW1lAElBc3luY1N0YXRlTWFjaGluZQBTZXRTdGF0ZU1hY2hpbmUAc3RhdGVN
-YWNoaW5lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAHNldF9Db21tYW5kVHlwZQBW
-YWx1ZVR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0
-aW9uU2V0dGluZ3NCYXNlAERpc3Bvc2UAQ3JlYXRlAEVkaXRvckJyb3dzYWJsZVN0YXRlADw+MV9f
-c3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJp
-YnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJs
-eVRpdGxlQXR0cmlidXRlAEFzeW5jU3RhdGVNYWNoaW5lQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVt
-YXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBEZWJ1Z2dlckhpZGRlbkF0dHJp
-YnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0
-dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0
-dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50
-cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGli
-aWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQBBZGRXaXRoVmFsdWUAdmFsdWUA
-U3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBnZXRfQ29ubmVjdGlvblN0cmluZwBHZXRTdHJpbmcA
-Z2V0X1Rhc2sAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzY4MTU5MDdiNjFlNTQ0Y2E4MGQ3Njhm
-YTI4ZThiMjA0LmRsbABnZXRfQ3VzdG9tZXJJRF9Jc051bGwAZ2V0X0NpdWRhZF9Jc051bGwAZ2V0
-X0NvbnRhY3ROYW1lX0lzTnVsbABnZXRfUmVnaW9uX0lzTnVsbABnZXRfVG90YWxWZW50YXNfSXNO
-dWxsAGdldF9QYWlzX0lzTnVsbABnZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFp
-bgBnZXRfUmVnaW9uAEN1c3RvbWVyUmVnaW9uAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5H
-bG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAFNxbFBhcmFtZXRlckNvbGxlY3Rpb24ARGJD
-b25uZWN0aW9uAFNxbENvbm5lY3Rpb24AU2V0RXhjZXB0aW9uAFN5c3RlbS5EYXRhLkNvbW1vbgBT
-dHJpbmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jv
-c29mdC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAAQXN5bmNUYXNrTWV0aG9kQnVpbGRlcgA8PnRf
-X2J1aWxkZXIARW50cmFkYTBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9S
-ZXNvdXJjZU1hbmFnZXIATG9hZEN1c3RvbWVyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRp
-bWUuV3JhcHBlcgBTcWxQYXJhbWV0ZXIAVGFza0F3YWl0ZXIAR2V0QXdhaXRlcgAuY3RvcgAuY2N0
-b3IAZ2V0X1RvdGFsVmVudGFzAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21w
-aWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfNjgxNTkwN2I2MWU1NDRjYTgwZDc2OGZh
-MjhlOGIyMDQuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFND
-XzY4MTU5MDdiNjFlNTQ0Y2E4MGQ3NjhmYTI4ZThiMjA0LlByb3BlcnRpZXMAZ2V0X1JlYWRPbmx5
-VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBn
-ZXRfUGFpcwBTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzAEVxdWFscwBDb25uZWN0aW9ucwBnZXRfUGFy
-YW1ldGVycwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAR2V0UmVzdWx0AFNldFJlc3Vs
-dABTeXN0ZW0uRGF0YS5TcWxDbGllbnQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2Ny
-aXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQAU3RhcnQATWljcm9zb2Z0
-LlNxbFNlcnZlci5QaXBlbGluZUhvc3QARW50cmFkYTBfUHJvY2Vzc0lucHV0AE1vdmVOZXh0AEdl
-dFZhbHVlV2l0aENvbnRleHQAU2NyaXB0Q29tcG9uZW50RXZhbENvbnRleHQAZ2V0X0V2YWx1YXRv
-ckNvbnRleHQARW50cmFkYTBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AEN1
-c3RvbWVyQ291bnRyeQBDdXN0b21lckNpdHkAAAAAE0UAbgB0AHIAYQBkAGEAIAAwAAAhQwBvAG4A
-bgBlAGMAdABpAG8AbgBTAHQAcgBpAG4AZwAAcVMAQwBfADYAOAAxADUAOQAwADcAYgA2ADEAZQA1
-ADQANABjAGEAOAAwAGQANwA2ADgAZgBhADIAOABlADgAYgAyADAANAAuAFAAcgBvAHAAZQByAHQA
-aQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAgKFEAGEAdABhACAAUwBvAHUAcgBjAGUAPQBSAEUA
-RABBAEMAVABFAEQAOwBJAG4AaQB0AGkAYQBsACAAQwBhAHQAYQBsAG8AZwA9AFIARQBEAEEAQwBU
-AEUARAA7AFUAcwBlAHIAIABJAEQAPQBSAEUARABBAEMAVABFAEQAOwBQAGEAcwBzAHcAbwByAGQA
-PQBSAEUARABBAEMAVABFAEQAAIGLSQBOAFMARQBSAFQAIABJAE4AVABPACAAZABiAG8ALgBDAHUA
-cwB0AG8AbQBlAHIAcwAgACgAQwB1AHMAdABvAG0AZQByAEkAZAAsAEMAdQBzAHQAbwBtAGUAcgBD
-AG8AbgB0AGEAYwB0AE4AYQBtAGUALAAgAEMAdQBzAHQAbwBtAGUAcgBDAGkAdAB5ACwAQwB1AHMA
-dABvAG0AZQByAFIAZQBnAGkAbwBuACwAIABDAHUAcwB0AG8AbQBlAHIAQwBvAHUAbgB0AHIAeQAp
-ACAAVgBBAEwAVQBFAFMAIAAoAEAAQwB1AHMAdABvAG0AZQByAEkAZAAsACAAQABDAHUAcwB0AG8A
-bQBlAHIAQwBvAG4AdABhAGMAdABOAGEAbQBlACwAIABAAEMAdQBzAHQAbwBtAGUAcgBDAGkAdAB5
-ACwAIABAAEMAdQBzAHQAbwBtAGUAcgBSAGUAZwBpAG8AbgAsACAAQABDAHUAcwB0AG8AbQBlAHIA
-QwBvAHUAbgB0AHIAeQApAAAXQABDAHUAcwB0AG8AbQBlAHIASQBkAAAbQABDAHUAcwB0AG8AbQBl
-AHIATgBhAG0AZQAAH0AAQwB1AHMAdABvAG0AZQByAFIAZQBnAGkAbwBuAAAbQABDAHUAcwB0AG8A
-bQBlAHIAQwBpAHQAeQAAIUAAQwB1AHMAdABvAG0AZQByAEMAbwB1AG4AdAByAHkAAAARQf11eOGT
-Q5SPM3VKwS0xAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARI5BSABARJNBiABARGAjQQgABFRBAcB
-ESQEAAARXQcwAQEBEB4ABAoBESQEIAASQQkgAwEScR0IEnUDBhJxAwYdCAQgAQ4IBCABAggEIAEN
-CAMgAAIHIAICDhGAnQUgAR0ICAUgABKAoQYgARKApRwFAAASgKkGIAEcEoCtBwABEjkRgLEFIAAS
-gLUHIAIBDhKAtQ0HBQgOEVEVEVUBCBJZCjACAgEQHgAQHgEGCgIRUREkBiACAQ4SYQUgABKAvQcg
-AhKAwQ4cBiABARGAyQggABUSgM0BCAYVEoDNAQgIIAAVEVUBEwAFFRFVAQgJCgIVEVUBCBEkBCAA
-EwAFIAEBElkIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEnkEBhKAhQQGEoCJAwYSIAIGCAMG
-EV0CBg4DBhJhAwYRUQMGEmUGBhURVQEIBSABARIMCSAFEkEODg4ODgMgAA4DIAANCSAEAQgOEnES
-dQUgAQESeQUAABKAhQUAABKAiQYAAQESgIkEAAASIAMAAAEDKAAOAygAAgMoAA0FCAASgIUFCAAS
-gIkECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAo
-AQAjU0NfNjgxNTkwN2I2MWU1NDRjYTgwZDc2OGZhMjhlOGIyMDQAAAUBAAAAABYBABFDb3B5cmln
-aHQgQCAgMjAyNQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtE
-aXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjciAQAdU2NyaXB0TWFpbis8TG9hZEN1c3RvbWVy
-PmRfXzMAAAQBAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJl
-YWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNL
-ZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNl
-U2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAACoPwAAAAAAAAAAAADCPwAAACAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAtD8AAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQ
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQ
-AAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhA
-AADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv
-/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYA
-YQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAA
-ALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQA
-YgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBh
-AG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMA
-XwA2ADgAMQA1ADkAMAA3AGIANgAxAGUANQA0ADQAYwBhADgAMABkADcANgA4AGYAYQAyADgAZQA4
-AGIAMgAwADQAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAA
-AABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADYAOAAxADUAOQAwADcAYgA2
-ADEAZQA1ADQANABjAGEAOAAwAGQANwA2ADgAZgBhADIAOABlADgAYgAyADAANAAuAGQAbABsAAAA
-SAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABA
-ACAAIAAyADAAMgA1AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAA
-AAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANgA4ADEANQA5
-ADAANwBiADYAMQBlADUANAA0AGMAYQA4ADAAZAA3ADYAOABmAGEAMgA4AGUAOABiADIAMAA0AC4A
-ZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADYAOAAxADUAOQAw
-ADcAYgA2ADEAZQA1ADQANABjAGEAOAAwAGQANwA2ADgAZgBhADIAOABlADgAYgAyADAANAAAADQA
-CAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBB
-AHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPno2GcAAAAAAAAAAOAAIiALATAAACIAAAAIAAAAAAAAJkAA
+AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANQ/AABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+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
+hgjsBWUACwDRIQAAAACGADQLZQALANkhAAAAAIYABAplAAsA4SEAAAAAhhidCAYACwABIgAAAADG
+AMEKpgELACYiAAAAAMYBuAqVAQ8AOSIAAAAAxgEbC5UBEAA7IgAAAACGGJ0IsAERAEoiAAAAAIYI
+KQeKABIAayIAAAAAhhidCLABEgB6IgAAAACGCFkFMwETAKAiAAAAAIMYnQgGABMAqCIAAAAAkwjx
+B7YBEwDUIgAAAACTCNUCvAETANsiAAAAAJMI4QLCARMA4yIAAAAAlggQCskBFADqIgAAAACGGJ0I
+BgAUAPIiAAAAAJEYowjOARQAACMAAAAA4QHOCgYAFADYJQAAAADhAX0CGwAUAAAAAQA4CwAAAQAK
+AQAAAgBUAgAAAwAfAgAABABNCwAABQBjBgAABgBZCwAAAQDqBwAAAgCFCQAAAwBRBwAAAQAVAQAA
+AgArAgAAAwDqBwAABABRBwAAAQDqBwAAAQA4CwAAAQBqCgAAAQBqCgAAAQA5BQAAAQCNAgkATQAJ
+AJ0IAQARAJ0IBgAZAJ0ICgApAJ0IEAAxAJ0IEAA5AJ0IEABBAJ0IEABJAJ0IEABRAJ0IEABZAJ0I
+EABhAJ0IEABpAJ0IBgB5AJ0IFQCJAJ0IBgCZAM4KBgCZAH0CGwDRAJ0IBgAJAZ0IBgApAZ0IIQDx
+ABUFBgDxACAFBgCBAJIIKAC5AB0DMgC5AJEKNwC5AHgFRADZAJ0ISQDZAOoHUwDZAIUJVwDhAG4F
+WwDZADEGYADZADQLZQDZAAQKZQDxAJ0IBgA5AdQJaQDxAJkJcQD5AJ0IBgDxACkBdwBJAaYGfQBR
+ATUCgwBZAQUIigDxAG8JkABhATgGlgDxAAYLnQBpAdcKowBxAAECqgBxADwLsgARAZ0IuAAxAZ0I
+BgDBAJ0IEACRAWwBRAChAKIBZQC5AIsB0QChABwKBgDJAJ0I4wCZAZ0I6gDJAOcJ8AChASwF9gCp
+AbsC/gCpAXYBBQEMAJIIFQEUAKIBZQAUABwKLgHBARUDBgCxANcBMwE5AfYJNwHJAWACPQG5APgG
+QgG5ACYKBgC5AH0CGwAuAAsA8QEuABMA+gEuABsAGQIuACMAIgIuACsASwIuADMASwIuADsASwIu
+AEMAIgIuAEsAUQIuAFMASwIuAFsAaAJDAGMA1QKAAGsAsgLhAHMA1QLjAJMA1QIjAXMA1QLpAZsA
+GQIJApsAGQKgBIsA1QItAMAAAwABAAUADQAGAA4ABwAPAAgAEQAAAGMG0gEAAAcG1gEAAAoB0gEA
+AMMF1gEAAB8C0gEAANkF1gEAAFkL0gEAACwG1gEAAE0L0gEAABkG1gEAAFQC0gEAAPAF1gEAAC0H
+2gEAAF0F0gEAAPUH4AEAAPUC5gEAABQK7AECAAcAAwACAAgABQACAAkABwACAAoACQACAAsACwAC
+AAwADQACAA0ADwACAA4AEQACAA8AEwACABAAFQACABEAFwACABIAGQACABoAGwACABwAHQACAB4A
+HwACAB8AIQABACAAIQACACEAIwAJAEgAHwAJAEoAIQAOAR4BBIAAAAEAAAAAAAAAAAAAAAAASAEA
+AAQAAAAAAAAAAAAAAEgBPwEAAAAAEAAAAAAAAAAAAAAAUQF0CgAAAAAEAAAAAAAAAAAAAABIAR0B
+AAAAABAAAAAAAAAAAAAAAFEBlwoAAAAAEAAAAAAAAAAAAAAAUQFbBwAAAAAEAAAAAAAAAAAAAABI
+AUEGAAAAABAAAAAAAAAAAAAAAFEBfgcAAAAAAAAAAAEAAADuCAAACQACADEAPwBpANwAaQAkAQAA
+AAAASURUU0NvbXBvbmVudE1ldGFEYXRhMTAwAElEVFNWYXJpYWJsZTEwMABJRFRTUnVudGltZUNv
+bm5lY3Rpb25Db2xsZWN0aW9uMTAwAElEVFNSdW50aW1lQ29ubmVjdGlvbjEwMABJRFRTQ29ubmVj
+dGlvbk1hbmFnZXIxMDAASURUU1ZhcmlhYmxlczEwMABJRFRTRXZhbHVhdG9yQ29udGV4dDEwMAA8
+PnVfXzEAVGFza2AxAFRhc2tBd2FpdGVyYDEAPGNvbm5lY3Rpb24+NV9fMgA8PnVfXzIAPGNvbW1h
+bmQ+NV9fMwA8TG9hZEN1c3RvbWVyPmRfXzMAPE1vZHVsZT4AZ2V0X0N1c3RvbWVySUQASW5wdXRJ
+RABTeXN0ZW0uRGF0YQBnZXRfQ29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAU0NfMjIyYmMzMjQ5
+ZTRmNDRkNjk0ZjY4ZDIwZmY1MThhN2MAT3BlbkFzeW5jAEV4ZWN1dGVOb25RdWVyeUFzeW5jAEF3
+YWl0VW5zYWZlT25Db21wbGV0ZWQAZ2V0X0lzQ29tcGxldGVkAERiQ29tbWFuZABTcWxDb21tYW5k
+AGRlZmF1bHRJbnN0YW5jZQBnZXRfTWVzc2FnZQBJRGlzcG9zYWJsZQBSdW50aW1lVHlwZUhhbmRs
+ZQBHZXRUeXBlRnJvbUhhbmRsZQBDb25zb2xlAGdldF9Db250YWN0TmFtZQBJbnB1dE5hbWUAR2V0
+UnVudGltZUNvbm5lY3Rpb25CeU5hbWUAZ2V0X0NvbXBhbnlOYW1lAFdyaXRlTGluZQBJQXN5bmNT
+dGF0ZU1hY2hpbmUAU2V0U3RhdGVNYWNoaW5lAHN0YXRlTWFjaGluZQBNaWNyb3NvZnQuU3FsU2Vy
+dmVyLkR0cy5QaXBlbGluZQBzZXRfQ29tbWFuZFR5cGUAVmFsdWVUeXBlAGdldF9DdWx0dXJlAHNl
+dF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3Nl
+AENyZWF0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQA8PjFfX3N0YXRlAENvbXBpbGVyR2VuZXJhdGVk
+QXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0
+ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3luY1N0
+YXRlTWFjaGluZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFt
+ZXdvcmtBdHRyaWJ1dGUARGVidWdnZXJIaWRkZW5BdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0
+aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxh
+eGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmln
+aHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1i
+bHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1
+dGUAUG9zdEV4ZWN1dGUAQWRkV2l0aFZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
+bmcAZ2V0X0Nvbm5lY3Rpb25TdHJpbmcAR2V0U3RyaW5nAGdldF9UYXNrAFN5c3RlbS5Db21wb25l
+bnRNb2RlbABTQ18yMjJiYzMyNDllNGY0NGQ2OTRmNjhkMjBmZjUxOGE3Yy5kbGwAZ2V0X0N1c3Rv
+bWVySURfSXNOdWxsAGdldF9Db250YWN0TmFtZV9Jc051bGwAZ2V0X0NvbXBhbnlOYW1lX0lzTnVs
+bABnZXRfUmVnaW9uX0lzTnVsbABnZXRfQ291bnRyeV9Jc051bGwAZ2V0X0NpdHlfSXNOdWxsAGdl
+dF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9SZWdpb24AU3lzdGVtLkNv
+bmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24AZ2V0X1J1
+bnRpbWVDb25uZWN0aW9uQ29sbGVjdGlvbgBTcWxQYXJhbWV0ZXJDb2xsZWN0aW9uAERiQ29ubmVj
+dGlvbgBTcWxDb25uZWN0aW9uAFNldEV4Y2VwdGlvbgBTeXN0ZW0uRGF0YS5Db21tb24AU3RyaW5n
+Q29tcGFyaXNvbgBnZXRfQ29uZXhpw7NuAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0
+TWFwAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAATWljcm9zb2Z0LlNxbFNlcnZl
+ci5EVFNQaXBlbGluZVdyYXAAQXN5bmNUYXNrTWV0aG9kQnVpbGRlcgA8PnRfX2J1aWxkZXIARW50
+cmFkYTBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFn
+ZXIAZ2V0X0Nvbm5lY3Rpb25NYW5hZ2VyAExvYWRDdXN0b21lcgBNaWNyb3NvZnQuU3FsU2VydmVy
+LkR0cy5SdW50aW1lLldyYXBwZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3Jh
+cHBlcgBTcWxQYXJhbWV0ZXIAVGFza0F3YWl0ZXIAR2V0QXdhaXRlcgAuY3RvcgAuY2N0b3IAU3lz
+dGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJl
+c291cmNlcwBTQ18yMjJiYzMyNDllNGY0NGQ2OTRmNjhkMjBmZjUxOGE3Yy5Qcm9wZXJ0aWVzLlJl
+c291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfMjIyYmMzMjQ5ZTRmNDRkNjk0ZjY4
+ZDIwZmY1MThhN2MuUHJvcGVydGllcwBnZXRfUmVhZE9ubHlWYXJpYWJsZXMAQnVmZmVyQ29sdW1u
+SW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzADw+NF9fdGhpcwBTeXN0ZW0uVGhyZWFk
+aW5nLlRhc2tzAEVxdWFscwBDb25uZWN0aW9ucwBnZXRfUGFyYW1ldGVycwBDb25jYXQAT2JqZWN0
+AEVuZE9mUm93c2V0AGdldF9EZWZhdWx0AEdldFJlc3VsdABTZXRSZXN1bHQAU3lzdGVtLkRhdGEu
+U3FsQ2xpZW50AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVudABN
+aWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AFN0YXJ0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlw
+ZWxpbmVIb3N0AEVudHJhZGEwX1Byb2Nlc3NJbnB1dABNb3ZlTmV4dABHZXRWYWx1ZVdpdGhDb250
+ZXh0AFNjcmlwdENvbXBvbmVudEV2YWxDb250ZXh0AGdldF9FdmFsdWF0b3JDb250ZXh0AEVudHJh
+ZGEwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQBnZXRfQ291bnRyeQBnZXRf
+Q2l0eQAAAAATRQBuAHQAcgBhAGQAYQAgADAAABFDAG8AbgBlAHgAaQDzAG4AASFDAG8AbgBuAGUA
+YwB0AGkAbwBuAFMAdAByAGkAbgBnAABxUwBDAF8AMgAyADIAYgBjADMAMgA0ADkAZQA0AGYANAA0
+AGQANgA5ADQAZgA2ADgAZAAyADAAZgBmADUAMQA4AGEANwBjAC4AUAByAG8AcABlAHIAdABpAGUA
+cwAuAFIAZQBzAG8AdQByAGMAZQBzAAApZABiAG8ALgBMAG8AYQBkAEQAaQBtAEMAdQBzAHQAbwBt
+AGUAcgBzAAAXQABDAHUAcwB0AG8AbQBlAHIASQBEAAAZQABDAG8AbQBwAGEAbgB5AE4AYQBtAGUA
+ABlAAEMAbwBuAHQAYQBjAHQATgBhAG0AZQAAEUAAQwBvAHUAbgB0AHIAeQAAD0AAUgBlAGcAaQBv
+AG4AAAtAAEMAaQB0AHkAAA1FAHIAcgBvAHIAIAAAAAAA0rSzHVkdT0WL+8TN0EzTiAAEIAEBCAMg
+AAEFIAEBEREEIAEBDgUgAQESOQUgAQESTQYgAQERgJEEIAARUQQHAREkBAAAEV0HMAEBARAeAAQK
+AREkBCAAEkEJIAMBEnEdCBJ1AwYScQMGHQgEIAEOCAQgAQIIAyAAAgcgAgIOEYChBSABHQgIBSAA
+EoClBSAAEoCpBiABEoCtDgUgABKAgQUgABKAsQYgARKAtRwFAAASgLkGIAEcEoC9BwABEjkRgMEF
+IAASgMUHIAIBDhKAxRAHBggSCBFRFRFVAQgSWRJZCjACAgEQHgAQHgEGCgIRUREkBiACAQ4SYQUg
+AgEOHAUgABKA0QcgAhKAzQ4cBiABARGA2QggABUSgN0BCAYVEoDdAQgIIAAVEVUBEwAFFRFVAQgJ
+CgIVEVUBCBEkBCAAEwADIAAOBQACDg4OBAABAQ4FIAEBElkIt3pcVhk04IkIiYRdzYCAzJEDBhIU
+AwYSGAMGEnkEBhKAiQQGEoCNAwYSIAIGCAMGEV0DBhIIAgYOAwYSYQMGEVEDBhJlBgYVEVUBCAUg
+AQESDAogBhJBDg4ODg4OCSAEAQgOEnESdQUgAQESeQUAABKAiQUAABKAjQYAAQESgI0EAAASIAMA
+AAEDKAAOAygAAgUoABKAgQUIABKAiQUIABKAjQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9u
+RXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ18yMjJiYzMyNDllNGY0NGQ2OTRmNjhkMjBm
+ZjUxOGE3YwAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDI1AABJAQAaLk5FVEZyYW1ld29yayxW
+ZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNyIB
+AB1TY3JpcHRNYWluKzxMb2FkQ3VzdG9tZXI+ZF9fMwAABAEAAAAAALQAAADOyu++AQAAAJEAAABs
+U3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAu
+MCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3Rl
+bS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAD8PwAA
+AAAAAAAAAAAWQAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAAABfQ29yRGxs
+TWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1217,7 +1010,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA1D8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAA
+AAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAA
+AOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+
+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBh
+AHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAA
+sARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAANABi
+ADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBOAGEA
+bQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBf
+ADIAMgAyAGIAYwAzADIANAA5AGUANABmADQANABkADYAOQA0AGYANgA4AGQAMgAwAGYAZgA1ADEA
+OABhADcAYwAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4AMAAA
+AHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMgAyADIAYgBjADMAMgA0ADkA
+ZQA0AGYANAA0AGQANgA5ADQAZgA2ADgAZAAyADAAZgBmADUAMQA4AGEANwBjAC4AZABsAGwAAABI
+ABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAA
+IAAgADIAMAAyADUAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAA
+AHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwAyADIAMgBiAGMA
+MwAyADQAOQBlADQAZgA0ADQAZAA2ADkANABmADYAOABkADIAMABmAGYANQAxADgAYQA3AGMALgBk
+AGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AMgAyADIAYgBjADMA
+MgA0ADkAZQA0AGYANAA0AGQANgA5ADQAZgA2ADgAZAAyADAAZgBmADUAMQA4AGEANwBjAAAANAAI
+AAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEA
+cwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAAAoMAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1226,14 +1046,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del proyecto de Microsoft Visual Studio Tools para Aplicaciones. Los nombres de proyecto deben ser únicos en el paquete."
                   name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_6815907b61e544ca80d768fa28e8b204</property>
+                  typeConverter="NOTBROWSABLE">SC_222bc3249e4f44d694f68d20ff518a7c</property>
                 <property
                   dataType="System.String"
                   description="Especifica el lenguaje de programación que utiliza el script."
@@ -1256,67 +1076,327 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="BreakpointCollection"
                   typeConverter="NOTBROWSABLE">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="1">
+                    <arrayElement
+                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D16.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
+&lt;Enabled&gt;true&lt;/Enabled&gt;
+&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
+&lt;FileLine&gt;119&lt;/FileLine&gt;
+&lt;FileColumn&gt;8&lt;/FileColumn&gt;
+&lt;/a1:ScriptBreakpointInfo&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
                   description="Suma de comprobación para comparar los metadatos del componente con los códigos compilados."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">C1</property>
+                  typeConverter="NOTBROWSABLE">5C</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
               </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Customer\Componente de script.Connections[Conexión]"
+                  connectionManagerID="{CF180191-726C-4313-A67E-1F3AB1A0046C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-KP55IUM.db_NorthwindDTWH]"
+                  name="Conexión" />
+              </connections>
               <inputs>
                 <input
-                  refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0]"
+                  refId="Package\Load Customer\Componente de script.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[Pais]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Pais"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Pais]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[Region]"
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[Region]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="Region"
                       lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Region]" />
                     <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[Ciudad]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Ciudad"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Ciudad]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[TotalVentas]"
-                      cachedDataType="r8"
-                      cachedName="TotalVentas"
-                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[TotalVentas]" />
-                    <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[CustomerID]"
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[CustomerID]"
                       cachedDataType="wstr"
                       cachedLength="5"
                       cachedName="CustomerID"
                       lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CustomerID]" />
                     <inputColumn
-                      refId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0].Columns[ContactName]"
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[ContactName]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="ContactName"
                       lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load Customer\Componente de script.Inputs[Entrada 0].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="CompanyName"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CompanyName]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Customer\Load Customer Data.Outputs[Salida 0]"
+                  refId="Package\Load Customer\Componente de script.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Load Customer\Componente de script.Inputs[Entrada 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Customer\Get Customer Data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get Customer Data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Customer\Get Customer Data.Connections[OleDbConnection]"
+                  connectionManagerID="{640D8AFE-D287-4013-A0E0-7BD64160E9B7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-KP55IUM.Northwind 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      length="5"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      length="30"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      name="ContactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      name="ContactName" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      name="CompanyName" />
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1325,7 +1405,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Load Customer.Paths[OLE DB Source Output]"
-              endId="Package\Load Customer\Load Customer Data.Inputs[Entrada 0]"
+              endId="Package\Load Customer\Componente de script.Inputs[Entrada 0]"
               name="OLE DB Source Output"
               startId="Package\Load Customer\Get Customer Data.Outputs[OLE DB Source Output]" />
           </paths>
@@ -1380,30 +1460,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           TopLeft="221.666654555335,142.133332344956" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="284.866654555334,183.733332344956">
+          TopLeft="284.866654555335,183.733332344956">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.10000013659402,41.5999994214376"
+              EndConnector="9.100000136593,41.599999421438"
               Start="0,0"
-              End="9.10000013659402,34.0999994214376">
+              End="9.100000136593,34.099999421438">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.7999997107188" />
+                    End="0,16.799999710719" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.7999997107188"
-                    Point2="0,20.7999997107188"
-                    Point3="4,20.7999997107188" />
+                    Point1="0,16.799999710719"
+                    Point2="0,20.799999710719"
+                    Point3="4,20.799999710719" />
                   <mssgle:LineSegment
-                    End="5.10000013659402,20.7999997107188" />
+                    End="5.100000136593,20.799999710719" />
                   <mssgle:CubicBezierSegment
-                    Point1="5.10000013659402,20.7999997107188"
-                    Point2="9.10000013659402,20.7999997107188"
-                    Point3="9.10000013659402,24.7999997107188" />
+                    Point1="5.100000136593,20.799999710719"
+                    Point2="9.100000136593,20.799999710719"
+                    Point3="9.100000136593,24.799999710719" />
                   <mssgle:LineSegment
-                    End="9.10000013659402,34.0999994214376" />
+                    End="9.100000136593,34.099999421438" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1425,35 +1505,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\Load Customer\Get Customer Data"
           TopLeft="254.666653052801,110.366665937437" />
         <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Load Customer\Load Customer Data"
-          TopLeft="224.166654418741,234.866665033433" />
+          Size="180,41.6"
+          Id="Package\Load Customer\Componente de script"
+          TopLeft="323.33331566718,305.066664545271" />
         <EdgeLayout
           Id="Package\Load Customer.Paths[OLE DB Source Output]"
           TopLeft="338.666653052801,151.966665937437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-27.2999986340603,82.8999990959963"
+              EndConnector="74.6666626143787,153.099998607834"
               Start="0,0"
-              End="-27.2999986340603,75.3999990959963">
+              End="74.6666626143787,145.599998607834">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.4499995479981" />
+                    End="0,72.5499993039171" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.4499995479981"
-                    Point2="0,41.4499995479981"
-                    Point3="-4,41.4499995479981" />
+                    Point1="0,72.5499993039171"
+                    Point2="0,76.5499993039171"
+                    Point3="4,76.5499993039171" />
                   <mssgle:LineSegment
-                    End="-23.2999986340603,41.4499995479981" />
+                    End="70.6666626143787,76.5499993039171" />
                   <mssgle:CubicBezierSegment
-                    Point1="-23.2999986340603,41.4499995479981"
-                    Point2="-27.2999986340603,41.4499995479981"
-                    Point3="-27.2999986340603,45.4499995479981" />
+                    Point1="70.6666626143787,76.5499993039171"
+                    Point2="74.6666626143787,76.5499993039171"
+                    Point3="74.6666626143787,80.5499993039171" />
                   <mssgle:LineSegment
-                    End="-27.2999986340603,75.3999990959963" />
+                    End="74.6666626143787,145.599998607834" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1474,7 +1554,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">View</Value>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
